@@ -1,0 +1,32 @@
+###
+
+GET http://localhost:9999/chain HTTP/1.1
+
+###
+
+POST http://localhost:9999/mine HTTP/1.1
+
+###
+
+GET http://localhost:9999/nodes HTTP/1.1
+
+###
+
+POST http://localhost:9999/nodes/register HTTP/1.1
+
+###
+
+POST http://localhost:9999/transactions HTTP/1.1
+content-type: application/json
+
+{
+    "sender": "senderAddress1",
+    "receiver": "receiverAddress2",
+    "amount": 2
+}
+
+###
+
+POST http://localhost:9999/checkChain HTTP/1.1
+
+###
